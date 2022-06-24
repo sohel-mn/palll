@@ -1,0 +1,505 @@
+/* All common css start */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;    
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: #000; 
+    
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+img {
+    width: 100%;
+}
+h4 {
+    font-size: 1.8rem;
+}
+hr {
+    border: 0;
+    border-bottom: .1rem solid #fff;
+    margin: 3rem 0;
+}
+
+/* ============ reuseable content =============== */
+
+.container{
+    max-width: 118rem;
+    margin: 0 auto;
+}
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+section {
+    padding: 12rem 0;
+}
+.btn {
+    font-size: 1.6rem;
+    background: #000;
+    border: .2rem solid #000;
+    color: #fff;
+    display: inline-block;
+    width: 20rem;
+    padding: 1.25rem 0;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.btn-full {
+    background: #ff2b4a;
+    border-color: #ff2b4a;
+    transition: all 1s;
+}
+.btn-full:hover {
+    background: transparent;
+    color: #ff2b4a;
+}
+
+.section_title {
+    text-align: center;
+    margin-bottom: 6.5rem;
+}
+.section_title h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+h3 {
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 3rem;
+}
+/* All common css end */
+
+/* ============== head part starts here ==============  */
+#hero{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(../image/office.jpg) no-repeat center bottom / cover;
+    position: relative;
+}
+nav {
+    position: absolute;
+    top: 4.5rem;
+    width: 100%;
+    z-index: 1;
+}
+.logo{
+    float: left;
+    /* margin-top: 4.5rem; */
+}
+.menu {
+    float: right;
+    /* margin-top: 4.5rem; */
+}
+.menu a ion-icon{
+    color: #fff;
+    font-size: 4.5rem;
+    border: .2rem solid #fff;
+}
+.hero_content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 100%;
+}
+
+.hero_content h1{
+    font-size: 6.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    border-top: .2rem solid #fff;
+    border-bottom: .2rem solid #fff;
+    display: inline-block;
+    
+}
+
+
+.hero_content span{
+     font-size: 2.2rem;
+    color: #fff;
+    margin-top: .5rem;
+    display: inline-block;
+}
+
+.next_section a {
+    color: #fff;
+    font-size: 4rem;
+    position: absolute;
+    bottom: 4.5rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: inline;
+    text-align: center;
+    z-index: 1;
+
+   
+}
+.next_section a ion-icon {
+    position: relative;
+     -webkit-animation: arrow 2s ease-in-out infinite;
+             animation: arrow 2s ease-in-out infinite;
+      /* bottom: 4.5rem; */
+}
+/* hamburger menu */
+
+.hamburger_menu {
+    width: 0;
+    height: 100vh;
+    background: rgba(0,0,0,.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 9999;
+}
+.close_btn a ion-icon {
+    color: #fff;
+    font-size: 4.5rem;
+    position: absolute;
+    top: 4.5rem;
+    right: 4.5rem;
+}
+.hamburger_menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.hamburger_menu ul li a {
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    line-height: 2;
+    text-decoration: none;
+    transition: all 1s;
+    display: inline-block;
+}
+.hamburger_menu ul li:hover a {
+    color: #ff2b4a;
+    transform: scale(1.5);
+}
+
+/* Sticky menu */
+
+nav.uk-sticky-fixed {
+    /* top: 2rem; */
+    width: 100%;
+    background: rgba(0,0,0,.8);
+    padding: 1.5rem 0;
+}
+
+
+
+
+@-webkit-keyframes arrow {
+    0% {
+        top: 1rem
+    }
+    50% {
+        top: 50%;
+    }
+    100% {
+        top: 1rem;
+    }
+}
+
+
+
+
+@keyframes arrow {
+    0% {
+        top: 1rem
+    }
+    50% {
+        top: 50%;
+    }
+    100% {
+        top: 1rem;
+    }
+}
+
+
+/* Particle js */
+canvas.particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+/* ==============  head part ends here ==============  */
+
+/*  ============== about part starts here ==============  */
+
+.about_grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 8rem;
+}
+.paul {
+    -webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+            clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+}
+
+.about_grid_item p {
+    margin: 4rem 0;
+}
+
+/*  ============== about part ends here ==============  */
+
+/* ==============  process part stats here ==============  */
+#process {
+    background: #f6f6f6;
+}
+.process_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+.process_grid_item {
+    background: #000;
+    text-align: center;
+    padding: 8rem 0;
+    
+}
+.process_icon {
+     margin-bottom: 4rem; 
+      
+}
+.process_icon ion-icon {
+    color: #fff;
+    font-size: 4.5rem;
+    transition: all 1s; 
+     
+}
+.process_grid_item h4 {
+    color: #fff;
+    text-transform: uppercase;
+}
+.process_grid_item:nth-child(1) {
+    background: #10c6fc;
+}
+.process_grid_item:nth-child(2) {
+    background: #835aeb;
+}
+.process_grid_item:nth-child(3) {
+    background: #002453;
+}
+.process_grid_item:nth-child(4) {
+    background: #ff2b4a;
+}
+.process_grid_item:hover .process_icon ion-icon {
+    color: #10c6fc;
+    background: #000;
+    transform: scale(2);
+}
+/*  ============== process part ends here ==============  */
+
+/*  ============== exprience part starts here ==============  */
+#exp {
+    min-height: 100vh;
+    background: url(../image/paul-office.jpg) no-repeat center top / cover fixed;
+}
+.exp_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+     color: #fff;
+}
+.exp_grid_item {
+    background: rgba(0,0,0,.7);
+    padding: 6.5rem 4.5rem;
+} 
+.exp_grid_item h4 {
+    color: #fff;
+}
+.exp_grid_item span {
+    margin: 1rem 0;
+    display: inline-block;
+}
+/*  ============== exprience part ends here ==============  */
+
+/*  ============== latest work part starts here ==============  */
+.work_filter {
+    margin-bottom: 4.5rem;
+    text-align: center;
+}
+.work_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+.work_grid_item {
+    height: 26rem;
+}
+.work_grid_item img {
+    height: 100%;
+}
+.work_grid_item:nth-child(5) {
+    grid-column: 1/3;
+}
+.work_filter button {
+    background: #000;
+    color: #fff;
+    border: 0;
+    padding: .5rem 2rem;
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 1s;
+    margin: .5rem 0;
+}
+
+.work_filter button:hover,
+.mixitup-control-active {
+    background: #ff2b4a !important;
+}
+.uk-lightbox {
+    background: rgba(0,0,0,.7);
+}
+
+
+/*  ============== latest work part ends here ==============  */
+
+/*  ============== testimonial part starts here ==============  */
+#testi {
+    background:#ccc url(../image/Carry-man.jpg) no-repeat center top / cover;
+}
+.testi_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.quote {
+    width: 6rem;
+}
+.testi_grid p {
+    margin: 4.5rem 0;
+}
+.testi_grid h4 {
+    margin: 2rem 0 .5rem 0;
+}
+.signature{
+    width: 17rem;
+}
+/*  ============== testimonial part ends here ==============  */
+
+/*  ============== contact  part starts here ==============  */
+#contact {
+    background: #ccc url(../image/paul-outdoor.jpg) no-repeat center / cover fixed;
+}
+.contact_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+.contact_grid_item:nth-child(1),
+.nested_contact_grid_item {
+    background: rgba(0,0,0,.7);
+    padding: 6rem 3rem;
+}
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    width: 100%;
+    border: .1rem solid #fff;
+    padding: 1.5rem 2rem;
+    margin: 1rem 0;
+    background: transparent;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+#contact textarea {
+    height: 20rem;
+}
+.contact_cta_btn {
+    text-align: right;
+    margin-top: 3rem;
+}
+.nested_contact_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    color: #fff;
+}
+/*  ============== contact part ends here ==============  */
+
+/*  ============== footer part starts here ==============  */
+#foot{
+    background: #222;
+    padding: 4.5rem 0;
+    text-align: center;
+}
+.social_list ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.social_list ul li {
+    display: inline-block;
+}
+.social_list ul li a ion-icon {
+    color: #fff;
+    padding: 0 1rem;
+    font-size: 2rem;
+    border-right: .1rem solid #fff;
+    transition: all 1s;
+}
+.social_list ul li a ion-icon:hover {
+    color: #ff2b4a;
+    transform: rotate(360deg) scale(1.5);
+    margin: .5rem;
+    border: 0;
+}
+.social_list ul li:last-child a ion-icon {
+    border: 0;
+}
+.copyright {
+    color: #fff;
+    font-size: 1.4rem;
+}
+.copyright a {
+    color: #ff2b4a;
+    transition: all 5s;
+}
+.copyright a:hover {
+    text-decoration: underline;
+}
+.totop {
+    border: .1rem solid #fff;
+    display: inline-block;
+    margin-top: 2rem;
+    padding: .5rem;
+    transition: all 1s;
+}
+.totop:hover {
+    background: #fff;
+    border: 0;
+}
+/*  ============== footer part ends here ==============  */
+
+
+
